@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Music Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="hero">
+        <div class="navbar">
+            <img src="images-removebg-preview.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <LI><a href="#">SUPPORT</a></LI>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left">
+                <h1> LOOKISM <br> OST</h1>
+            </div>
+            <div class="right">
+                <p><b>Click To Play</b></p>
+                <img src="what-removebg-preview.png" id="icon">
+            </div>
+        </div>
+    </div>
+
+    <audio id="mysong">
+        <source src="Fly Up (English Lyric Video) - Lookism_R-nv0qD0l44.mp3" type="audio/mp3">
+    </audio>
+    
+    <script>
+
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+        
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.src = "what-removebg-preview.png";
+            }else{
+                mysong.pause();
+                icon.src = "what-removebg-preview.png";
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
